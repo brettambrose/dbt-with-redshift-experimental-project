@@ -1,0 +1,70 @@
+name: my_project
+version: "1.0.0"
+
+# for an example of a dbt project, see the jaffle shop project here:s
+#https://github.com/dbt-labs/jaffle-shop-classic/tree/main
+
+profile: my_redshift
+
+model-paths: ["models"]
+# analysis-paths: ["analysis"]
+# test-paths: ["tests"]
+# macro-paths: ["macros"]
+# snapshot-paths: ["snapshots"]
+
+clean-targets:
+    - "target"
+    - "dbt_modules"
+    - "logs"
+
+# require-dbt-version: [">=1.0.0", "<2.0.0"]
+
+models:
+  my_project:
+    artists:
+      +materialized: table
+    songplays:
+      +materialized: table
+    songs:
+      +materialized: table
+    time:
+      +materialized: table
+    users:
+      +materialized: table
+
+seeds:
+  my_project:
+    songs_raw:
+      +schema: staging
+      +column_types:
+        artist_id: text
+        artist_latitude: numeric
+        artist_location: text
+        artist_longitude: numeric
+        artist_name: text
+        duration: numeric
+        num_songs: int
+        song_id: text
+        title: text
+        year: int
+    events_raw:
+      +schema: staging
+      +column_types:
+        artist: text
+        auth: text
+        firstname: text
+        gender: text
+        iteminsession: text
+        lastname: text
+        length: numeric
+        level: text
+        location: text
+        method: text
+        page: text
+        registration: bigint
+        sessionid: int
+        song: text
+        status: int
+        ts: timestamp
+        useragent: text
+        userid: text
