@@ -18,9 +18,6 @@ KEY                   = aws_creds.get("default", "aws_access_key_id")
 SECRET                = aws_creds.get("default", "aws_secret_access_key")
 REGION                = aws_config.get("default", "region")
 
-# S3
-# S3_BUCKET_NAME        = main_config.get("S3","S3_BUCKET_NAME")
-
 print("**********************************************")
 print("Establishing boto3 resources and clients...")
 
