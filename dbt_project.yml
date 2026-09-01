@@ -1,16 +1,16 @@
 name: my_project
 version: "1.0.0"
 
-# for an example of a dbt project, see the jaffle shop project here:s
-#https://github.com/dbt-labs/jaffle-shop-classic/tree/main
+# for an example of a dbt project, see the jaffle shop project here:
+# https://github.com/dbt-labs/jaffle-shop-classic/tree/main
 
 profile: my_redshift
 
 model-paths: ["models"]
-# analysis-paths: ["analysis"]
-# test-paths: ["tests"]
-# macro-paths: ["macros"]
-# snapshot-paths: ["snapshots"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analysis"]
+macro-paths: ["macros"]
 
 clean-targets:
     - "target"
