@@ -5,3 +5,4 @@
    artist_latitude,
    artist_longitude
   FROM {{ref('songs_raw')}}
+  WHERE artist_id IS NOT NULL

@@ -7,3 +7,4 @@
    EXTRACT(year from ts) AS year,
    EXTRACT(dayofweek from ts) AS weekday
   FROM {{ref('events_raw')}}
+  WHERE ts IS NOT NULL
