@@ -1,0 +1,99 @@
+models:
+  - name: artists
+    description: "This table contains the artists data."
+    columns:
+      - name: artist_id
+        description: "The unique identifier for each artist."
+        data_tests:
+          - not_null
+          - unique
+      - name: name
+        description: "The name of the artist."
+      - name: location
+        description: "The location of the artist."
+      - name: latitude
+        description: "The latitude coordinate of the artist's location."
+      - name: longitude
+        description: "The longitude coordinate of the artist's location."
+  - name: songplays
+    description: "This table contains the songplays data."
+    columns:
+      - name: songplay_id
+        description: "The unique identifier for each songplay."
+        data_tests:
+          - not_null
+          - unique
+      - name: start_time
+        description: "The timestamp when the songplay started."
+      - name: user_id
+        description: "The unique identifier for the user."
+      - name: level
+        description: "The subscription level of the user (e.g., free, paid)."
+      - name: song_id
+        description: "The unique identifier for the song."
+      - name: artist_id
+        description: "The unique identifier for the artist."
+      - name: sessionid
+        description: "The session ID associated with the songplay."
+      - name: location
+        description: "The location where the songplay occurred."
+      - name: useragent
+        description: "The user agent string of the user's device."
+      - name: session_duration
+        description: "The duration of the session in seconds."
+      - name: session_duration_minutes
+        description: "The duration of the session in minutes."
+  - name: songs
+    description: "This table contains the songs data." 
+    columns:
+      - name: song_id
+        description: "The unique identifier for each song."
+        data_tests:
+          - not_null
+          - unique
+      - name: title
+        description: "The title of the song."
+      - name: artist_id
+        description: "The unique identifier for the artist."
+      - name: year
+        description: "The year the song was released."
+      - name: duration
+        description: "The duration of the song in seconds."
+      - name: duration_minutes
+        description: "The duration of the song in minutes."
+  - name: time
+    description: "This table contains the time dimension data."
+    columns:
+      - name: ts
+        description: "The timestamp when the songplay started."
+        data_tests:
+          - not_null
+          - unique
+      - name: hour
+        description: "The hour of the day when the songplay occurred."
+      - name: day
+        description: "The day of the month when the songplay occurred."
+      - name: week
+        description: "The week of the year when the songplay occurred."
+      - name: month
+        description: "The month when the songplay occurred."
+      - name: year
+        description: "The year when the songplay occurred."
+      - name: weekday
+        description: "The day of the week when the songplay occurred."  
+  - name: users
+    description: "This table contains the users data."
+    columns:
+      - name: user_id
+        description: "The unique identifier for each user."
+        data_tests:
+          - not_null
+          - unique
+      - name: first_name
+        description: "The first name of the user."
+      - name: last_name
+        description: "The last name of the user."
+      - name: gender
+        description: "The gender of the user."  
+      - name: level
+        description: "The subscription level of the user (e.g., free, paid)."
