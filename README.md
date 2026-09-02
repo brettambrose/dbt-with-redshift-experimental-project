@@ -48,6 +48,15 @@ dbt show --select analysis\songplays_monthly_avg.sql
 Which should return the following results
 ![sonplays_monthly_avg_results](/assets/images/songplays_monthly_avg_results.png)
 
+## dbt docs metadata and lineage mapping
+Running the following dbt commands to generate and view docs
 
+<pre>
+dbt docs generate
+dbt docs serve
+</pre>
+
+dbt docs serve will launch the localhost webpage documentation for your project.  It should look like this.
+![dbt docs generate](/assets/images/dbt_docs_generate_html.png)
 
 ## REST OF README TO DO
