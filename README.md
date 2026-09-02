@@ -46,7 +46,7 @@ dbt show --select analysis\songplays_monthly_avg.sql
 </pre>
 
 Which should return the following results
-![sonplays_monthly_avg_results](/assets/songplays_monthly_avg_results.png)
+![sonplays_monthly_avg_results](/assets/images/songplays_monthly_avg_results.png)
 
 
 
