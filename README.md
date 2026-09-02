@@ -19,7 +19,7 @@ C:\users\YOURSPECIALUSERNAME\.dbt
 Create a YAML file call "profiles"
 
 profiles.yml content should look like this:
-<pep>
+<pre>
 my_redshift:
   target: dev
   outputs:
@@ -34,8 +34,20 @@ my_redshift:
       threads: 4
       keepalives_idle: 240
       sslmode: require
-</pep>
+</pre>
 
 ## AWS config and credentials TODO
+
+## dbt analysis queries
+Run the following command to return the results of the monthly average songplays analysis
+
+<pre>
+dbt show --select analysis\songplays_monthly_avg.sql
+</pre>
+
+Which should return the following results
+![sonplays_monthly_avg_results](/assets/songplays_monthly_avg_results.png)
+
+
 
 ## REST OF README TO DO
