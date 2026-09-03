@@ -30,10 +30,14 @@ KEY                   = aws_creds.get("default", "aws_access_key_id")
 SECRET                = aws_creds.get("default", "aws_secret_access_key")
 REGION                = aws_config.get("default", "region")
 
-
 print("**************************************************************")
 print("Establishing boto3 resources and clients...")
 
+s3_client = boto3.client("s3",
+                         aws_access_key_id=KEY,
+                         aws_secret_access_key=SECRET,
+                         region_name=REGION
+                         )
 
 iam_client = boto3.client('iam',
                           aws_access_key_id=KEY,
